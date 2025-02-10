@@ -19,7 +19,7 @@ This repository contains the source code and documentation needed to set up and 
 
 ## Prerequisites
 
-- **Python:** Version 3.7 or above.
+- **Python:** Version 3.9 or above.
 - **Required Libraries:**  
   - `pandas`
   - `numpy`
@@ -31,68 +31,99 @@ This repository contains the source code and documentation needed to set up and 
   - `huggingface_hub`
   - Plus other standard libraries (e.g., `json`, `textwrap`, `warnings`)
 
-You can install all dependencies using pip.
+You can install all dependencies using pip:
+
+        pip install textwrap pandas numpy matplotlib seaborn json5 regex huggingface_hub tpot scikit-learn mlflow
 
 
-
-
-
-
-Usage Instructions
+# Usage Instructions
 
 Once installed, run the tool via the command line. The tool provides an interactive menu that guides you through each step.
 
-    Run the Application: python data_analysis_tool.py
+To Run the Application: 
 
-Interactive Menu Options:
+      python data_analysis_tool.py
 
-After starting the application, you will see a menu with the following options:
+### Interactive Menu Options:
 
-    1. Load Dataset:
-        What It Does: Prompts you to enter the file path of your CSV dataset and loads the data.
-        User Action: Provide the full path to your CSV file (e.g., /path/to/data.csv).
+####After starting the application, you will see a menu with the following options:
 
-    2. Explore Dataset:
-        What It Does: Displays basic information about the dataset, including its structure, first five rows, and summary statistics.
-        User Action: Simply review the output in the terminal.
 
-    3. Clean Dataset:
-        What It Does: Automatically handles missing values by dropping or filling them and removes outliers using the IQR method.
-        User Action: Observe the cleaning messages printed to the console.
+  ##### 1. Load Dataset:
+  
+  What It Does: Prompts you to enter the file path of your CSV dataset and loads the data.
+  
+  User Action: Provide the full path to your CSV file (e.g., /path/to/data.csv).
 
-    4. Determine Target Variable:
-        What It Does: Lists the columns in your dataset and asks you to select one as the target variable for model training.
-        User Action: Enter the name of the target variable exactly as it appears in the dataset.
+  ##### 2. Explore Dataset:
+  
+  What It Does: Displays basic information about the dataset, including its structure, first five rows, and summary statistics.
+  
+  User Action: Simply review the output in the terminal.
 
-    5. Analyze Dataset:
-        What It Does: Generates an AI-driven analysis prompt to recommend interesting visualizations based on relationships between dataset columns.
-        User Action: Review the generated visualizations and recommendations.
+  ##### 3. Clean Dataset:
+  
+  What It Does: Automatically handles missing values by dropping or filling them and removes outliers using the IQR method.
+  
+  User Action: Observe the cleaning messages printed to the console.
 
-    6. Encode Categorical Columns:
-        What It Does: Detects categorical columns and prompts you to choose between Label Encoding and One-Hot Encoding.
-        User Action: For each detected categorical column, enter your choice (1 for Label Encoding, 2 for One-Hot Encoding).
+  ##### 4. Determine Target Variable:
+  
+  What It Does: Lists the columns in your dataset and asks you to select one as the target variable for model training.
+  
+  User Action: Enter the name of the target variable exactly as it appears in the dataset.
 
-    7. Train Models and Evaluate:
-        What It Does: Splits the data into training and testing sets, automatically trains an AutoML model (using TPOT) and a baseline decision tree model, then evaluates the performance.
-        User Action: Review the model performance metrics printed to the console (e.g., accuracy, RMSE, R²).
+  ##### 5. Analyze Dataset:
+  
+  What It Does: Generates an AI-driven analysis prompt to recommend interesting visualizations based on relationships between dataset columns.
+  
+  User Action: Review the generated visualizations and recommendations.
 
-    8. Generate Report:
-        What It Does: Compiles the analysis, visualizations, and model results into a detailed report with sections (Introduction, Data Quality Checks, Data Exploration, Training a Model, Model Evaluation, Conclusion) and saves it to a text file.
-        User Action: Open the generated dataset_analysis_report.txt to view the full report.
+  ##### 6. Encode Categorical Columns:
+  
+  What It Does: Detects categorical columns and prompts you to choose between Label Encoding and One-Hot Encoding.
+  
+  User Action: For each detected categorical column, enter your choice (1 for Label Encoding, 2 for One-Hot Encoding).
 
-    9. Exit:
-        What It Does: Exits the application.
-        User Action: Select this option when you are finished.
+  ##### 7. Train Models and Evaluate:
+  
+  What It Does: Splits the data into training and testing sets, automatically trains an AutoML model (using TPOT) and a baseline decision tree model, then evaluates the performance.
+  
+  User Action: Review the model performance metrics printed to the console (e.g., accuracy, RMSE, R²).
 
-Workflow Example:
+  ##### 8. Generate Report:
+  
+  What It Does: Compiles the analysis, visualizations, and model results into a detailed report with sections (Introduction, Data Quality Checks, Data Exploration, Training a Model, Model Evaluation, Conclusion)
+  and saves it to a text file.
+  
+  User Action: Open the generated dataset_analysis_report.txt to view the full report.
 
-    Step 1: Start by loading your dataset (option 1).
-    Step 2: Explore your dataset (option 2) to understand its structure.
-    Step 3: Clean the dataset (option 3) to handle missing values and outliers.
-    Step 4: Select the target variable (option 4) for model training.
-    Step 5: Analyze relationships and get visualization recommendations (option 5).
-    Step 6: Encode any categorical features as needed (option 6).
-    Step 7: Train and evaluate your models (option 7).
-    Step 8: Generate and review a comprehensive report (option 8).
+  ##### 9. Exit:
+  
+  What It Does: Exits the application.
+  
+  User Action: Select this option when you are finished.
+
+  
+
+### Workflow Example:
+
+  - **Step 1:** Start by loading your dataset (option 1).
+  - **Step 2:** Explore your dataset (option 2) to understand its structure.
+  - **Step 3:** Clean the dataset (option 3) to handle missing values and outliers.
+  - **Step 4:** Select the target variable (option 4) for model training.
+  - **Step 5:** Analyze relationships and get visualization recommendations (option 5).
+  - **Step 6:** Encode any categorical features as needed (option 6).
+  - **Step 7:** Train and evaluate your models (option 7).
+  - **Step 8:** Generate and review a comprehensive report (option 8).
+
+
+Contributions to the Dataset Analysis Tool are welcome. If you have suggestions or improvements, please fork the repository and submit a pull request.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contact
+For any questions or issues, please contact [lukamarg@gmail.com].
 
 
