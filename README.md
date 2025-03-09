@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Dataset Analysis Tool** is a comprehensive Python application that automates key phases of the data science workflow. It provides interactive data loading, cleaning, exploratory analysis, visualization (including AI-assisted recommendations), categorical encoding, model training with AutoML, evaluation, and automated report generation—all in one tool.
+The **Dataset Analysis Tool** is a Python application that automates key phases of the data science workflow. It provides interactive data loading, cleaning, exploratory analysis, visualization (including AI-assisted recommendations), categorical encoding, model training with AutoML, evaluation, and automated report generation—all in one tool.
 
 This repository contains the source code and documentation needed to set up and use the tool effectively.
 
